@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Back End con Spring Boot | JR</title>
+  <meta name="description" content="Documentación y guía de clase de Programación de Back End con Spring Boot.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E2A5C'/%3E%3Ctext x='16' y='21' font-family='Arial,sans-serif' font-size='14' font-weight='700' text-anchor='middle' fill='%2328B3AC'%3EJR%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap">
+  <link rel="stylesheet" href="css/estilos.css">
+
+  <script>
+    // Aplica el tema guardado antes de pintar (evita parpadeo).
+    try { var t = localStorage.getItem("tema"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="saltar" href="#contenido">Ir al contenido</a>
+
+  <header class="barra">
+    <button id="btn-menu" class="btn-icono btn-menu" type="button" aria-label="Abrir temario" aria-expanded="false" aria-controls="lateral">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <a class="marca" href="#inicio">
+      <span class="marca-icono" id="marca-sigla">JR</span>
+      <span class="marca-texto"><strong id="marca-curso">Back End con Spring Boot</strong><span>Documentación y guía de clase</span></span>
+    </a>
+    <span class="barra-espacio"></span>
+    <button id="btn-tema" class="btn-icono" type="button" aria-label="Cambiar tema">
+      <svg class="icono-luna" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      <svg class="icono-sol" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </header>
+
+  <p id="banner-prueba" class="banner-prueba" role="status" hidden></p>
+
+  <div class="marco">
+    <nav id="lateral" class="lateral" aria-label="Temario del curso">
+      <div class="buscar">
+        <label class="visually-hidden" for="buscar">Buscar en el temario</label>
+        <input id="buscar" type="search" placeholder="Buscar en el temario" autocomplete="off">
+      </div>
+      <div id="temario"></div>
+    </nav>
+    <div id="velo" class="velo" aria-hidden="true"></div>
+
+    <main id="contenido" tabindex="-1"></main>
+
+    <aside id="indice" class="indice" aria-label="Índice de la página"></aside>
+  </div>
+
+  <!-- Resaltado de código (si no carga, el código se ve sin colores) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/http.min.js"></script>
+
+  <!-- 1. Configuración y temario -->
+  <script src="js/config.js"></script>
+  <script src="js/temario.js"></script>
+  <script src="js/componentes.js"></script>
+
+  <!-- 2. Páginas: agrega aquí un archivo por cada tema nuevo -->
+  <script src="contenido/inicio.js"></script>
+  <script src="contenido/backend.js"></script>
+  <script src="contenido/http-rest.js"></script>
+  <script src="contenido/spring-boot.js"></script>
+  <script src="contenido/mvc.js"></script>
+  <script src="contenido/ejercicio-mago.js"></script>
+  <script src="contenido/referencia-anotaciones.js"></script>
+
+  <!-- 3. Aplicación -->
+  <script src="js/simulador.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
