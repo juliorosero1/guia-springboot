@@ -106,19 +106,19 @@
 
   /* ---------- Franja de capas: dónde vive este archivo ----------
      actual: "cliente" | "controller" | "service" | "repository" | "model" | "bd" */
-  D.capas = function (actual) {
+  D.capas = function (actual, textos = {}) {
     const capas = [
       ["cliente", "Cliente", "Postman / navegador"],
       ["controller", "Controller", "Recibe la petición"],
       ["service", "Service", "Lógica de negocio"],
       ["repository", "Repository", "Acceso a datos"],
-      ["bd", "Base de datos", "H2"]
+      ["bd", "Base de datos", textos.bd || "H2"]
     ];
     const items = capas
       .map(([id, nombre, desc]) =>
         `<li class="capa${id === actual ? " capa--actual" : ""}"${id === actual ? ' aria-current="true"' : ""}><span class="capa-nombre">${nombre}</span><span class="capa-desc">${desc}</span></li>`)
       .join("");
-    const modelo = `<p class="capas-modelo${actual === "model" ? " capa--actual" : ""}"><span class="capa-nombre">Model (Mago)</span><span class="capa-desc">El objeto que viaja entre todas las capas</span></p>`;
+    const modelo = `<p class="capas-modelo${actual === "model" ? " capa--actual" : ""}"><span class="capa-nombre">Model (${textos.modelo || "Mago"})</span><span class="capa-desc">El objeto que viaja entre todas las capas</span></p>`;
     return `<nav class="capas" aria-label="Capa del proyecto"><ol>${items}</ol>${modelo}</nav>`;
   };
 

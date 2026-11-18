@@ -218,7 +218,7 @@
           <h1>${esc(def.titulo)}</h1>
           ${meta.length ? `<p class="pagina-meta">${meta.map((m) => `<span>${m}</span>`).join("")}${pendiente ? '<span class="pill">Próximamente</span>' : ""}</p>` : ""}
           ${def.resumen ? `<p class="resumen">${def.resumen}</p>` : ""}
-          ${def.capa ? D.capas(def.capa) : ""}
+          ${def.capa ? D.capas(def.capa, def.capaTextos) : ""}
         </header>`}
         <div class="cuerpo">${def.render()}</div>
         ${navegacionInferior(id)}

@@ -37,6 +37,7 @@ ${D.enlaces([
   { id: "spring-boot", titulo: "3. Spring Boot", desc: "Instalar, crear el proyecto y el primer Hola mundo." },
   { id: "mvc", titulo: "4. Patrón MVC y capas", desc: "Controller, Service, Repository y Model." },
   { id: "mago", titulo: "Ejercicio: API de Magos", desc: "Un CRUD completo explicado archivo por archivo." },
+  { id: "base-datos-crud", titulo: "5. MySQL / PostgreSQL y CRUD", desc: "Conexión a un gestor real y taller de la API de Tareas." },
   { id: "anotaciones", titulo: "Referencia de anotaciones", desc: "Qué hace cada @ que hemos usado." }
 ])}
 
